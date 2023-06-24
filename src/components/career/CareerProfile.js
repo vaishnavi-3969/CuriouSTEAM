@@ -136,7 +136,7 @@ const CareerProfile = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen">
+    <div className="bg-gradient-to-b from-yellow-500 to-red-500 text-white min-h-screen">
     <div className="container mx-auto px-4 py-8">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}

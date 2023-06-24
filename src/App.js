@@ -7,6 +7,10 @@ import { Sidebar, SidebarContext } from './components/layout/Sidebar';
 
 import { useState } from "react";
 import ExpertInterview from "./components/expert-interview/ExpertInterview";
+import EducationalPathways from "./components/educational-pathways/EducationalPathways";
+import IndustryTrends from "./components/industry-trends/IndustryTrends";
+import EventsAndConferences from "./components/events/EventsAndConferences";
+import ResourcesAndTools from "./components/tools/ResourcesAndTools";
 
 
 function App() {
@@ -37,6 +41,10 @@ function App() {
               <Route path="/" element={<Home />} exact />
               <Route path="/career-profile" element={<CareerProfile />} exact />
               <Route path="/expert-interview" element={<ExpertInterview />} exact />
+              <Route path="/educational-pathways" element={<EducationalPathways />} exact />
+              <Route path="/industry-trends" element={<IndustryTrends/>} exact/>
+              <Route path="/events" element={<EventsAndConferences/>} exact/>
+              <Route path="/resources" element={<ResourcesAndTools/>} exact/>
             </Routes>
             <Footer />
           </div>
