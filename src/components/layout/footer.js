@@ -52,7 +52,7 @@ const Footer = () => {
         >
           <p className="text-xs text-gray-500">
             Built with <span className="text-red-500">React</span>, <span className="text-blue-500">Tailwind CSS</span>,
-            and <span className="text-green-500">Framer Motion</span> for the CuriouSTEAM Fest Mini Hackathon
+            and <span className="text-green-500">Framer Motion</span> for the STEAM Fest Mini Hackathon
           </p>
         </motion.div>
       </div>
