@@ -35,7 +35,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} exact />
               <Route path="/career-profile" element={<CareerProfile />} exact />
-              
             </Routes>
             <Footer />
           </div>
