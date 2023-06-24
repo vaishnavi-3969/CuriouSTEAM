@@ -1,25 +1,15 @@
 import React from 'react';
 
-const CareerProfileDetails = ({ profileId }) => {
-  // Assume the 'profiles' array contains career profile data
-  const profiles = [
-    {
-      id: 1,
-      title: 'Software Engineer',
-      description: 'A software engineer designs, develops, and maintains software applications.',
-      image: 'software-engineer.jpg',
-      details: 'Software engineers work in various industries...',
-    },
-    // Add more career profiles as needed
-  ];
-
-  // Find the profile with the matching 'profileId'
-  const profile = profiles.find((profile) => profile.id === profileId);
-
+const CareerProfileDetails = ({ profile }) => {
   return (
-    <div>
-      <h2>{profile.title}</h2>
-      <p>{profile.details}</p>
+    <div className="container mx-auto px-4 py-8">
+      <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center text-gray-200">
+        {profile.title}
+      </h2>
+      <div className="flex justify-center mb-8">
+        <img src={profile.image} alt={profile.title} className="w-1/2" />
+      </div>
+      <p className="text-gray-200">{profile.description}</p>
     </div>
   );
 };
