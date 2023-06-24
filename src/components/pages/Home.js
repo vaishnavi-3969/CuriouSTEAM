@@ -1,7 +1,88 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import CareerIcon from '../../assets/career-icon.png';
+import ExpertInterview from '../../assets/expert-interview.png';
+import EducationalPathway from '../../assets/educational-pathway.png';
+import TrendsIcon from '../../assets/trends-icon.png';
+import EventsIcon from '../../assets/events-icon.png';
+import ResourcesIcon from '../../assets/resources-icon.png';
 
 export default function Home() {
+  const featureCards = [
+    {
+      title: 'Career Profiles',
+      description: 'Explore various STEAM career paths and their opportunities',
+      icon: CareerIcon,
+      link: '/career-profile',
+    },
+    {
+      title: 'Expert Interviews',
+      description: 'Gain insights from experienced professionals in STEAM fields.',
+      icon: ExpertInterview,
+      link: '/expert-interview',
+    },
+    {
+      title: 'Educational Pathways',
+      description: 'Discover the educational routes to pursue a successful STEAM career.',
+      icon: EducationalPathway,
+      link: '/educational-pathway',
+    },
+    {
+      title: 'Industry Trends',
+      description: 'Stay updated with the latest trends and innovations in the STEAM world.',
+      icon: TrendsIcon,
+      link: '/industry-trends',
+    },
+    {
+      title: 'Events and Conferences',
+      description: 'Find information about upcoming STEAM events, workshops, and conferences.',
+      icon: EventsIcon,
+      link: '/events',
+    },
+    {
+      title: 'Resources and Tools',
+      description: 'Access valuable resources and tools to enhance your STEAM skills and knowledge.',
+      icon: ResourcesIcon,
+      link: '/resources',
+    },
+  ];
+
   return (
-    <div>Home</div>
-  )
+    <div className="bg-gradient-to-b from-yellow-500 to-red-500 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-8">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-bold mb-8 text-center text-gray-800"
+        >
+          Welcome to CuriouSTEAM
+        </motion.h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featureCards.map((card, index) => (
+            <Link to={card.link} key={index}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-6 rounded-lg bg-gray-800 shadow-lg hover:shadow-xl cursor-pointer"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
+                    <img src={card.icon} alt={card.title} className="h-6 w-6" />
+                  </div>
+                  <h2 className="text-lg font-semibold ml-2">{card.title}</h2>
+                </div>
+                <p className="text-sm">{card.description}</p>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
