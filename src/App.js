@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import { Sidebar, SidebarContext } from './components/layout/Sidebar';
 
 import { useState } from "react";
+import ExpertInterview from "./components/expert-interview/ExpertInterview";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} exact />
               <Route path="/career-profile" element={<CareerProfile />} exact />
+              <Route path="/expert-interview" element={<ExpertInterview />} exact />
             </Routes>
             <Footer />
           </div>
