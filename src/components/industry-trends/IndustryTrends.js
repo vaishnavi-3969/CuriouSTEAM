@@ -1,5 +1,11 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ai from './ai.png';
+import blockchain from './blockchain.png';
+import cybersecurity from './cybersecurity.png';
+import iot from './iot.png';
+import renewableEnergy from './renewable-energy.png';
+
 
 const IndustryTrends = () => {
   const trends = [
@@ -7,31 +13,31 @@ const IndustryTrends = () => {
       id: 1,
       title: 'Artificial Intelligence',
       description: 'AI technology is transforming industries and enabling new possibilities.',
-      image: 'artificial-intelligence.jpg',
+      image: ai,
     },
     {
       id: 2,
       title: 'Blockchain Technology',
       description: 'Blockchain is revolutionizing the way we secure transactions and data.',
-      image: 'blockchain-technology.jpg',
+      image: blockchain,
     },
     {
       id: 3,
       title: 'Internet of Things (IoT)',
       description: 'IoT connects devices and enables data exchange for smart systems.',
-      image: 'internet-of-things.jpg',
+      image: iot,
     },
     {
       id: 4,
       title: 'Cybersecurity',
       description: 'Protecting digital systems and data from unauthorized access and attacks.',
-      image: 'cybersecurity.jpg',
+      image: cybersecurity,
     },
     {
       id: 5,
       title: 'Renewable Energy',
       description: 'Clean energy sources like solar and wind are gaining momentum.',
-      image: 'renewable-energy.jpg',
+      image: renewableEnergy,
     },
   ];
 

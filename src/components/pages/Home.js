@@ -51,7 +51,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-yellow-500 to-red-500 text-white min-h-screen">
+    <div className="bg-gradient-to-b from-gray-000 to-gray-200 text-white min-h-screen">
     <div className="container mx-auto px-4 py-8">
       <motion.div
         initial={{ opacity: 0 }}
@@ -75,7 +75,13 @@ export default function Home() {
         </h1>
         <div className="w-3 h-3 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full animate-ping ml-2"></div>
       </motion.div>
-
+      <motion.div>
+        <p className="text-lg md:text-xl text-gray-900">
+          CuriouSTEAM is a platform that aims to inspire and empower the next generation of STEAM
+          leaders by providing them with the necessary resources and tools to pursue their dream
+          careers.
+        </p>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featureCards.map((card, index) => (
           <Link to={card.link} key={index}>

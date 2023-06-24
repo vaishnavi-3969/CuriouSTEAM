@@ -1,5 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ComputerScience from './computer-science.png';
+import BusinessAdministration from './business-administration.png';
+import DataScience from './data-science.png';
+import Engineering from './engineering.png';
+import GraphicDesign from './graphic-design.png';
 
 const EducationalPathways = () => {
   const pathways = [
@@ -7,31 +12,31 @@ const EducationalPathways = () => {
       id: 1,
       title: 'Computer Science',
       description: 'Learn programming languages and algorithms to build software applications.',
-      image: 'computer-science.jpg',
+      image: ComputerScience,
     },
     {
       id: 2,
       title: 'Data Science',
       description: 'Explore data analysis, machine learning, and statistical modeling techniques.',
-      image: 'data-science.jpg',
+      image: DataScience,
     },
     {
       id: 3,
       title: 'Engineering',
       description: 'Study principles of engineering and apply them to various disciplines.',
-      image: 'engineering.jpg',
+      image: Engineering,
     },
     {
       id: 4,
       title: 'Business Administration',
       description: 'Develop skills in management, marketing, finance, and entrepreneurship.',
-      image: 'business-administration.jpg',
+      image: BusinessAdministration,
     },
     {
       id: 5,
       title: 'Graphic Design',
       description: 'Learn visual communication and design skills using digital tools.',
-      image: 'graphic-design.jpg',
+      image: GraphicDesign,
     },
   ];
 
