@@ -1,17 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import CareerProfile from "./components/career/CareerProfile";
-
-import Footer from './components/layout/Footer';
 import { Sidebar, SidebarContext } from './components/layout/Sidebar';
-
 import { useState } from "react";
 import ExpertInterview from "./components/expert-interview/ExpertInterview";
 import EducationalPathways from "./components/educational-pathways/EducationalPathways";
 import IndustryTrends from "./components/industry-trends/IndustryTrends";
 import EventsAndConferences from "./components/events/EventsAndConferences";
 import ResourcesAndTools from "./components/tools/ResourcesAndTools";
-
+import Footer from './components/layout/Footer';
 
 function App() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
