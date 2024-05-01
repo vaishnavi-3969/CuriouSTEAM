@@ -51,60 +51,60 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-000 to-gray-200 text-white min-h-screen">
-    <div className="container mx-auto px-4 py-8">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="flex items-center justify-center mb-8"
-      >
-         <div className="w-35 h-35 flex items-center justify-center rounded-full bg-white">
+    <div className="min-h-screen text-white bg-gradient-to-b from-gray-000 to-gray-200">
+      <div className="container px-4 py-8 mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="flex items-center justify-center mb-8"
+        >
+          <div className="flex items-center justify-center bg-white rounded-full w-35 h-35">
             <img src={Logo} alt="CuriouSTEAM Logo" className="h-25 w-25" />
           </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
-          <Typewriter
-            options={{
-              strings: ['CuriouSTEAM'],
-              autoStart: true,
-              loop: true,
-              delay: 80,
-              deleteSpeed: 50,
-            }}
-          />
-        </h1>
-        <div className="w-3 h-3 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full animate-ping ml-2"></div>
-      </motion.div>
-      <motion.div>
-        <p className="text-lg md:text-xl text-gray-900">
-          CuriouSTEAM is a platform that aims to inspire and empower the next generation of STEAM
-          leaders by providing them with the necessary resources and tools to pursue their dream
-          careers.
-        </p>
-      </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {featureCards.map((card, index) => (
-          <Link to={card.link} key={index}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-6 rounded-lg bg-gray-800 shadow-lg hover:shadow-xl cursor-pointer"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
-                  <img src={card.icon} alt={card.title} className="h-6 w-6" />
+          <h1 className="text-4xl font-bold text-gray-800 md:text-6xl">
+            <Typewriter
+              options={{
+                strings: ['CuriouSTEAM'],
+                autoStart: true,
+                loop: true,
+                delay: 80,
+                deleteSpeed: 50,
+              }}
+            />
+          </h1>
+          <div className="w-3 h-3 ml-2 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 animate-ping"></div>
+        </motion.div>
+        <motion.div>
+          <p className="text-lg text-gray-900 md:text-xl">
+            CuriouSTEAM is a platform that aims to inspire and empower the next generation of STEAM
+            leaders by providing them with the necessary resources and tools to pursue their dream
+            careers.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featureCards.map((card, index) => (
+            <Link to={card.link} key={index}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-6 bg-gray-800 rounded-lg shadow-lg cursor-pointer hover:shadow-xl"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-white rounded-full">
+                    <img src={card.icon} alt={card.title} className="w-6 h-6" />
+                  </div>
+                  <h2 className="ml-2 text-lg font-semibold">{card.title}</h2>
                 </div>
-                <h2 className="text-lg font-semibold ml-2">{card.title}</h2>
-              </div>
-              <p className="text-sm">{card.description}</p>
-            </motion.div>
-          </Link>
-        ))}
+                <p className="text-sm">{card.description}</p>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 }
