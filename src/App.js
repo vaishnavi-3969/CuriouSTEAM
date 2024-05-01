@@ -8,7 +8,6 @@ import EducationalPathways from "./components/educational-pathways/EducationalPa
 import IndustryTrends from "./components/industry-trends/IndustryTrends";
 import EventsAndConferences from "./components/events/EventsAndConferences";
 import ResourcesAndTools from "./components/tools/ResourcesAndTools";
-// import Footer from './components/layout/Footer';
 
 function App() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
@@ -43,7 +42,6 @@ function App() {
               <Route path="/events" element={<EventsAndConferences/>} exact/>
               <Route path="/resources" element={<ResourcesAndTools/>} exact/>
             </Routes>
-            {/* <Footer /> */}
           </div>
         </SidebarContext.Provider>
       </BrowserRouter>
