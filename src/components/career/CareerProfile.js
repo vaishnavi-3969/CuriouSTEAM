@@ -1,7 +1,6 @@
 import React from 'react';
 import CareerProfileList from './CareerProfileList';
 import { motion } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
 import SoftwareEngineer from './software-engineer.png';
 import DataScientist from './data-scientist.png';
 import BioMedicalEngineer from './biomedical-engineer.png';
@@ -149,13 +148,13 @@ const CareerProfile = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-500 text-white min-h-screen">
-    <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen text-white bg-gradient-to-b from-gray-900 to-gray-500">
+    <div className="container px-4 py-8 mx-auto">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-4xl md:text-6xl font-bold mb-8 text-center text-gray-200"
+        className="mb-8 text-4xl font-bold text-center text-gray-200 md:text-6xl"
       >
         Career Profiles
       </motion.h1>
